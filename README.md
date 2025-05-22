@@ -1,3 +1,6 @@
 # PPL_BOMBA
-Hier vlt ein Projekt zur Orientierung: 
-https://github.com/fcayci/vhdl-display-simulator
+
+Kein Plan wie wir loslegen
+Das wird ne Katastrophe
+
+KATAAAAASTROPPPHHEEEEEEEE
