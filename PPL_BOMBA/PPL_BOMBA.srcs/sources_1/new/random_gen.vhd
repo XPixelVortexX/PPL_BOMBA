@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 -- Entity-Definition: Schnittstelle des Bomben-Generators
-entity bomb_generator_8x8 is
+entity random_gen is
     port (
         clk    : in std_logic;                         -- Takt
         rst    : in std_logic;                         -- Reset
@@ -11,10 +11,10 @@ entity bomb_generator_8x8 is
         bombs  : out std_logic_vector(63 downto 0);    -- Ausgabe: 64-Bit Spielfeld (8x8)
         done   : out std_logic                         -- Signal: Generierung abgeschlossen
     );
-end bomb_generator_8x8;
+end random_gen;
 
 -- Architektur der Schaltung
-architecture behavioral of bomb_generator_8x8 is
+architecture behavioral of random_gen is
 
     -- Interne Signale
     signal bomb_reg  : std_logic_vector(63 downto 0) := (others => '0'); -- Bombenfeld
