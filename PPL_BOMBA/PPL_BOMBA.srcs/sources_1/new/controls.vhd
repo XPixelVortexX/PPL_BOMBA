@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity minesweeper_controls is
+entity controls is
   Port (
     clk       : in  std_logic;                         -- Clock signal
     rst       : in  std_logic;                         -- Reset button
@@ -15,9 +15,9 @@ entity minesweeper_controls is
     y         : out std_logic_vector(2 downto 0);      -- Y-position (0 to 7)
     click     : out std_logic                          -- One-clock pulse for activation
   );
-end minesweeper_controls;
+end controls;
 
-architecture behavioral of minesweeper_controls is
+architecture behavioral of controls is
 
   type state_type is (idle, check, move, activate, wait_release);
   signal state : state_type := idle;
