@@ -29,8 +29,8 @@ architecture strukturell of top_level is
       btn_left      : in  std_logic;
       btn_right     : in  std_logic;
       btn_act       : in  std_logic;
-      x             : out std_logic_vector(3 downto 0);
-      y             : out std_logic_vector(3 downto 0);
+      x             : out std_logic_vector(7 downto 0);
+      y             : out std_logic_vector(7 downto 0);
       click         : out std_logic
     );
   end component;
@@ -55,7 +55,7 @@ architecture strukturell of top_level is
   component game_logic
     port (
       clk           : in  std_logic;
-      x, y          : in  std_logic_vector(3 downto 0);
+      x, y          : in  std_logic_vector(7 downto 0);
       click         : in  std_logic;
       bomb_map      : in  std_logic_vector(63 downto 0);
       read_data     : in  std_logic_vector(1 downto 0);
@@ -79,7 +79,7 @@ architecture strukturell of top_level is
   end component;
 
   -- Interne Signale
-  signal x, y           : std_logic_vector(3 downto 0);
+  signal x, y           : std_logic_vector(7 downto 0);
   signal click          : std_logic;
   signal bomb_map       : std_logic_vector(63 downto 0);
   signal write_enable   : std_logic;
