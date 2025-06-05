@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity objectbuffer is
+entity display is
     generic (
         OBJECT_SIZE : natural := 16;
         PIXEL_SIZE : natural := 24
@@ -15,9 +15,9 @@ entity objectbuffer is
         backgrnd_rgb       : in  std_logic_vector(PIXEL_SIZE-1 downto 0);
         rgb                : out std_logic_vector(PIXEL_SIZE-1 downto 0)
     );
-end objectbuffer;
+end display;
 
-architecture rtl of objectbuffer is
+architecture rtl of display is
     -- create a 5 pixel vertical wall
     constant WALL_X_L: integer := 60;
     constant WALL_X_R: integer := 65;
