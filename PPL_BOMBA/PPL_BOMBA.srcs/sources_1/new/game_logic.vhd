@@ -3,7 +3,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity Minesweeper_GameLogic is
+entity Game_Logic is
     generic (
         FIELD_SIZE : integer := 25;
         NUM_MINES  : integer := 5
@@ -14,14 +14,14 @@ entity Minesweeper_GameLogic is
         start_game      : in  std_logic;
         selected_index  : in  integer range 0 to FIELD_SIZE-1;
         reveal_request  : in  std_logic;
-        minefield       : in  std_logic_vector(FIELD_SIZE-1 downto 0); -- 1=Mine, 0=frei
+        minefield       : in  std_logic_vector(FIELD_SIZE-1 downto 0); 
         game_active     : out std_logic;
         hit_mine        : out std_logic;
         win             : out std_logic
     );
-end Minesweeper_GameLogic;
+end Game_Logic;
 
-architecture Behavioral of Minesweeper_GameLogic is
+architecture Behavioral of game_logic is
 
     signal revealed      : std_logic_vector(FIELD_SIZE-1 downto 0) := (others => '0');
     signal game_running  : std_logic := '0';
