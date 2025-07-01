@@ -60,7 +60,8 @@ architecture strukturell of top_level is
       bomb_map      : in  std_logic_vector(63 downto 0);
       read_data     : in  std_logic_vector(1 downto 0);
       write_data    : out std_logic_vector(1 downto 0);
-      write_enable  : out std_logic
+      write_enable  : out std_logic;
+      game_over     : out std_logic
     );
   end component;
 
