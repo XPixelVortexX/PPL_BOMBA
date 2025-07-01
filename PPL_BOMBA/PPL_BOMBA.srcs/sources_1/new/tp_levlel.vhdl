@@ -62,7 +62,7 @@ architecture strukturell of top_level is
       write_data    : out std_logic_vector(1 downto 0);
       write_enable  : out std_logic;
       game_over     : out std_logic
-    );
+     );
   end component;
 
   component display
